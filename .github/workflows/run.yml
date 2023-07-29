@@ -2,7 +2,7 @@ name: actions-trial
 on: [push]
 jobs:
   check-bats-version:
-    runs-on :ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-      - run: ./test_main.sh
+      - run: bash test_main.sh
       - run: echo "run complated"
