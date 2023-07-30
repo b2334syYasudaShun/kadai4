@@ -31,6 +31,12 @@ echo "引数は正の自然数を指定してください。" > /tmp/$$-ans
 diff /tmp/$$-ans /tmp/$$-result || echo "テスト ./main.sh -2 4" >> /tmp/$$-error.log
 rm /tmp/$$-ans /tmp/$$-result
 
+# 2.5 5 -> ERROR
+echo "引数は正の自然数を指定してください。" > /tmp/$$-ans
+./main.sh -2.5 5 > /tmp/$$-result
+diff /tmp/$$-ans /tmp/$$-result || echo "テスト ./main.sh -2.5 5" >> /tmp/$$-error.log
+rm /tmp/$$-ans /tmp/$$-result
+
 # D 51 -> ERROR
 echo "引数は正の自然数を指定してください。" > /tmp/$$-ans
 ./main.sh D 51 > /tmp/$$-result
