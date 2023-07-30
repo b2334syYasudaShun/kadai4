@@ -60,13 +60,4 @@ rm /tmp/$$-ans /tmp/$$-result
 if [ -f /tmp/$$-error.log ]; then
         cat /tmp/$$-error.log 1>&2
         rm /tmp/$$-error.log
-        fi
-done
-
-if [ $num2 -eq 1 ]; then
-        echo $num2
-else
-        echo $num1
-fi
-        exit 1
 fi
